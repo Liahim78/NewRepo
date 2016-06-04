@@ -20,7 +20,7 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <Button Margin="10,5" FontSize="15" >Выбрать</Button>
-            <Button Grid.Column="1" Margin="10,5" FontSize="15" >Отмена</Button>
+            <Button Grid.Column="1" Margin="10,5" FontSize="15" Click="Button_Click" >Отмена</Button>
         </Grid>
     </Grid>
 </Window>

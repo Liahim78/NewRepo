@@ -56,7 +56,10 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Comands\DelegateComand.cs" />
+    <Compile Include="Models\Directory.cs" />
+    <Compile Include="Models\File.cs" />
     <Compile Include="Models\Model.cs" />
+    <Compile Include="Models\TreeDirectory.cs" />
     <Compile Include="ViewModels\PlariumViewModel.cs" />
     <Compile Include="ViewModels\ViewModelIBase.cs" />
     <Compile Include="Views\ChooseDirectory.xaml.cs">

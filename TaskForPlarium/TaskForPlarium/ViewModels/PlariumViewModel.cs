@@ -6,19 +6,27 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
 using TaskForPlarium.Comands;
+using TaskForPlarium.Models;
 using TaskForPlarium.Views;
 
 namespace TaskForPlarium.ViewModels
 {
     class PlariumViewModel:ViewModelIBase
     {
-
+        Model myModel = new Model();
         private DelegateCommand<string> digitButtonPressCommand;
-        public void ChooseButtonPress(string operation)
+        
+        public string FullExpression
         {
-            ChooseDirectory myWindow = new ChooseDirectory();
-            myWindow.Show();
+            get { return fullExpression; }
+            set { fullExpression = value; OnPropertyChanged("FullExpression"); }
         }
+        public string Display
+        {
+            get { return display; }
+            set { display = value; OnPropertyChanged("Display"); }
+        }
+
         public ICommand ChooseButtonPressCommand
         {
             get
@@ -26,7 +34,7 @@ namespace TaskForPlarium.ViewModels
                 if (digitButtonPressCommand == null)
                 {
                     digitButtonPressCommand = new DelegateCommand<string>(
-                        ChooseButtonPress, (string button) => { return true; });
+                         myModel.ChooseButton, (string button) => { return true; });
                 }
                 return digitButtonPressCommand;
             }

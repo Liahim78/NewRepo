@@ -21,6 +21,7 @@ namespace TaskForPlarium.Views
     {
         public MainWindow()
         {
+            ListDirectory.DataContext = new List<string>();
             InitializeComponent();
         }
     }
