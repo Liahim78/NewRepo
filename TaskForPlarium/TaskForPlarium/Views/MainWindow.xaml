@@ -16,7 +16,7 @@
             <RowDefinition Height="50"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Button Content="Выбрать" FontSize="25" Margin="10,5"/>
+        <Button Content="Выбрать" Command="{Binding ChooseButtonPressCommand}" FontSize="25" Margin="10,5"/>
         <ListBox Visibility="Hidden"   Grid.Row="1" Margin="10,5"/>
         <ListBox Visibility="Hidden" Grid.Row="1" Grid.Column="1" Margin="10,5"></ListBox>
         <Grid Visibility="Hidden" Grid.Column="2" Grid.Row="1">
