@@ -16,7 +16,7 @@ namespace TaskForPlarium
         public void OnStartup(Object sender, StartupEventArgs e)
         {
             Views.MainWindow  view = new Views.MainWindow();
-            view.DataContext = new ViewModels.CalculatorViewModel();
+            view.DataContext = new ViewModels.PlariumViewModel();
             view.Show();
         }
     }
